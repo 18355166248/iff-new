@@ -8,7 +8,11 @@ export default [{
         tit: "#864fef",
         num: 10,
         left: "60%",
-        translate: ""
+        translate: "",
+        list: [{
+          name: 'Ptahs',
+          contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+        }]
       },
       {
         children: [{
@@ -17,15 +21,23 @@ export default [{
             tit: "#864fef",
             num: 9,
             left: "55%",
-            translate: ""
+            translate: "",
+            list: [{
+              name: 'Ptahs',
+              contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+            }]
           },
           {
             name: "Associate9-2",
             border: "#50b63c",
             tit: "#50b63c",
             num: 9,
-            left: "80px",
-            translate: ""
+            left: "5em",
+            translate: "",
+            list: [{
+              name: 'Ptahs',
+              contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+            }]
           }
         ]
       },
@@ -36,15 +48,23 @@ export default [{
             tit: "#864fef",
             num: 8,
             left: "45%",
-            translate: ""
+            translate: "",
+            list: [{
+              name: 'Ptahs',
+              contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+            }]
           },
           {
             name: "Associate8-2",
             border: "#50b63c",
             tit: "#50b63c",
             num: 8,
-            left: "20px",
-            translate: ""
+            left: "1.25em",
+            translate: "",
+            list: [{
+              name: 'Ptahs',
+              contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+            }]
           }
         ]
       },
@@ -55,7 +75,11 @@ export default [{
             tit: "#864fef",
             num: 7,
             left: "50%",
-            translate: ""
+            translate: "",
+            list: [{
+              name: 'Ptahs',
+              contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+            }]
           },
           {
             name: "Associate7-2",
@@ -63,15 +87,23 @@ export default [{
             tit: "#c44747",
             num: 7,
             left: "25%",
-            translate: ""
+            translate: "",
+            list: [{
+              name: 'Ptahs',
+              contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+            }]
           },
           {
             name: "Associate7-3",
             border: "#50b63c",
             tit: "#50b63c",
             num: 7,
-            left: "50px",
-            translate: ""
+            left: "3.125em",
+            translate: "",
+            list: [{
+              name: 'Ptahs',
+              contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+            }]
           }
         ]
       },
@@ -82,15 +114,23 @@ export default [{
             tit: "#864fef",
             num: 6,
             left: "40%",
-            translate: ""
+            translate: "",
+            list: [{
+              name: 'Ptahs',
+              contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+            }]
           },
           {
             name: "Associate6-2",
             border: "#b92424",
             tit: "#c44747",
             num: 6,
-            left: "80px",
-            translate: ""
+            left: "5em",
+            translate: "",
+            list: [{
+              name: 'Ptahs',
+              contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+            }]
           }
         ]
       },
@@ -99,32 +139,48 @@ export default [{
         border: "#b92424",
         tit: "#c44747",
         num: 5,
-        left: "150px",
-        translate: ""
+        left: "9.375em",
+        translate: "",
+        list: [{
+          name: 'Ptahs',
+          contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+        }]
       },
       {
         name: "Associate4",
         border: "#b92424",
         tit: "#c44747",
         num: 4,
-        left: "50px",
-        translate: ""
+        left: "3.125em",
+        translate: "",
+        list: [{
+          name: 'Ptahs',
+          contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+        }]
       },
       {
         name: "Associate3",
         border: "#b92424",
         tit: "#c44747",
         num: 3,
-        left: "200px",
-        translate: ""
+        left: "12.5em",
+        translate: "",
+        list: [{
+          name: 'Ptahs',
+          contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+        }]
       },
       {
         name: "Associate2",
         border: "#b92424",
         tit: "#c44747",
         num: 2,
-        left: "80px",
-        translate: ""
+        left: "5em",
+        translate: "",
+        list: [{
+          name: 'Ptahs',
+          contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+        }]
       },
       {
         name: "Associate1",
@@ -132,7 +188,24 @@ export default [{
         tit: "#c44747",
         num: 1,
         left: "50%",
-        translate: "translateX(-50%)"
+        translate: "translateX(-50%)",
+        list: [{
+            name: 'one',
+            contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+          },
+          {
+            name: 'two',
+            contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+          },
+          {
+            name: 'three',
+            contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+          },
+          {
+            name: 'four',
+            contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+          },
+        ],
       }
     ]
   },
@@ -146,7 +219,11 @@ export default [{
         tit: "#864fef",
         num: 10,
         left: "85%",
-        translate: ""
+        translate: "",
+        list: [{
+          name: 'Ptahs',
+          contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+        }]
       },
       {
         children: [{
@@ -155,7 +232,11 @@ export default [{
             tit: "#864fef",
             num: 9,
             left: "80%",
-            translate: ""
+            translate: "",
+            list: [{
+              name: 'Ptahs',
+              contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+            }]
           },
           {
             name: "Associate9-2",
@@ -163,7 +244,11 @@ export default [{
             tit: "#50b63c",
             num: 9,
             left: "15%",
-            translate: ""
+            translate: "",
+            list: [{
+              name: 'Ptahs',
+              contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+            }]
           }
         ]
       },
@@ -174,7 +259,11 @@ export default [{
             tit: "#864fef",
             num: 8,
             left: "75%",
-            translate: ""
+            translate: "",
+            list: [{
+              name: 'Ptahs',
+              contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+            }]
           },
           {
             name: "Associate8-2",
@@ -182,7 +271,11 @@ export default [{
             tit: "#50b63c",
             num: 8,
             left: "20%",
-            translate: ""
+            translate: "",
+            list: [{
+              name: 'Ptahs',
+              contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+            }]
           }
         ]
       },
@@ -193,7 +286,11 @@ export default [{
             tit: "#864fef",
             num: 7,
             left: "70%",
-            translate: ""
+            translate: "",
+            list: [{
+              name: 'Ptahs',
+              contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+            }]
           },
           {
             name: "Associate7-2",
@@ -201,7 +298,11 @@ export default [{
             tit: "#ffba00",
             num: 7,
             left: "50%",
-            translate: ""
+            translate: "",
+            list: [{
+              name: 'Ptahs',
+              contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+            }]
           },
           {
             name: "Associate7-3",
@@ -209,7 +310,11 @@ export default [{
             tit: "#50b63c",
             num: 7,
             left: "28%",
-            translate: ""
+            translate: "",
+            list: [{
+              name: 'Ptahs',
+              contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+            }]
           }
         ]
       },
@@ -220,7 +325,11 @@ export default [{
             tit: "#864fef",
             num: 6,
             left: "38%",
-            translate: ""
+            translate: "",
+            list: [{
+              name: 'Ptahs',
+              contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+            }]
           },
           {
             name: "Associate6-2",
@@ -228,7 +337,11 @@ export default [{
             tit: "#ffba00",
             num: 6,
             left: "60%",
-            translate: ""
+            translate: "",
+            list: [{
+              name: 'Ptahs',
+              contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+            }]
           }
         ]
       },
@@ -238,31 +351,47 @@ export default [{
         tit: "#ffba00",
         num: 5,
         left: "50%",
-        translate: ""
+        translate: "",
+        list: [{
+          name: 'Ptahs',
+          contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+        }]
       },
       {
         name: "Associate4",
         border: "#ffba00",
         tit: "#ffba00",
         num: 4,
-        left: "70px",
-        translate: ""
+        left: "4.375em",
+        translate: "",
+        list: [{
+          name: 'Ptahs',
+          contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+        }]
       },
       {
         name: "Associate3",
         border: "#ffba00",
         tit: "#ffba00",
         num: 3,
-        left: "150px",
-        translate: ""
+        left: "9.375em",
+        translate: "",
+        list: [{
+          name: 'Ptahs',
+          contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+        }]
       },
       {
         name: "Associate2",
         border: "#ffba00",
         tit: "#ffba00",
         num: 2,
-        left: "80px",
-        translate: ""
+        left: "5em",
+        translate: "",
+        list: [{
+          name: 'Ptahs',
+          contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+        }]
       },
       {
         name: "Associate1",
@@ -270,7 +399,11 @@ export default [{
         tit: "#ffba00",
         num: 1,
         left: "50%",
-        translate: "translateX(-50%)"
+        translate: "translateX(-50%)",
+        list: [{
+          name: 'Ptahs',
+          contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+        }]
       }
     ]
   },
@@ -284,7 +417,11 @@ export default [{
         tit: "#864fef",
         num: 10,
         left: "68%",
-        translate: ""
+        translate: "",
+        list: [{
+          name: 'Ptahs',
+          contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+        }]
       },
       {
         children: [{
@@ -293,7 +430,11 @@ export default [{
             tit: "#864fef",
             num: 9,
             left: "76%",
-            translate: ""
+            translate: "",
+            list: [{
+              name: 'Ptahs',
+              contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+            }]
           },
           {
             name: "Associate9-2",
@@ -301,7 +442,11 @@ export default [{
             tit: "#50b63c",
             num: 9,
             left: "28%",
-            translate: ""
+            translate: "",
+            list: [{
+              name: 'Ptahs',
+              contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+            }]
           }
         ]
       },
@@ -312,7 +457,11 @@ export default [{
             tit: "#864fef",
             num: 8,
             left: "67%",
-            translate: ""
+            translate: "",
+            list: [{
+              name: 'Ptahs',
+              contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+            }]
           },
           {
             name: "Associate8-2",
@@ -320,7 +469,11 @@ export default [{
             tit: "#50b63c",
             num: 8,
             left: "22%",
-            translate: ""
+            translate: "",
+            list: [{
+              name: 'Ptahs',
+              contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+            }]
           }
         ]
       },
@@ -331,7 +484,11 @@ export default [{
             tit: "#864fef",
             num: 7,
             left: "70%",
-            translate: ""
+            translate: "",
+            list: [{
+              name: 'Ptahs',
+              contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+            }]
           },
           {
             name: "Associate7-2",
@@ -339,7 +496,11 @@ export default [{
             tit: "#0040a6",
             num: 7,
             left: "50%",
-            translate: ""
+            translate: "",
+            list: [{
+              name: 'Ptahs',
+              contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+            }]
           },
           {
             name: "Associate7-3",
@@ -347,7 +508,11 @@ export default [{
             tit: "#50b63c",
             num: 7,
             left: "26%",
-            translate: ""
+            translate: "",
+            list: [{
+              name: 'Ptahs',
+              contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+            }]
           }
         ]
       },
@@ -358,7 +523,11 @@ export default [{
             tit: "#864fef",
             num: 6,
             left: "35%",
-            translate: ""
+            translate: "",
+            list: [{
+              name: 'Ptahs',
+              contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+            }]
           },
           {
             name: "Associate6-2",
@@ -366,7 +535,11 @@ export default [{
             tit: "#0040a6",
             num: 6,
             left: "60%",
-            translate: ""
+            translate: "",
+            list: [{
+              name: 'Ptahs',
+              contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+            }]
           }
         ]
       },
@@ -376,7 +549,11 @@ export default [{
         tit: "#0040a6",
         num: 5,
         left: "50%",
-        translate: ""
+        translate: "",
+        list: [{
+          name: 'Ptahs',
+          contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+        }]
       },
       {
         name: "Associate4",
@@ -384,23 +561,35 @@ export default [{
         tit: "#0040a6",
         num: 4,
         left: "0",
-        translate: ""
+        translate: "",
+        list: [{
+          name: 'Ptahs',
+          contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+        }]
       },
       {
         name: "Associate3",
         border: "#0040a6",
         tit: "#0040a6",
         num: 3,
-        left: "70px",
-        translate: ""
+        left: "4.375em",
+        translate: "",
+        list: [{
+          name: 'Ptahs',
+          contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+        }]
       },
       {
         name: "Associate2",
         border: "#0040a6",
         tit: "#0040a6",
         num: 2,
-        left: "180px",
-        translate: ""
+        left: "11.25em",
+        translate: "",
+        list: [{
+          name: 'Ptahs',
+          contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+        }]
       },
       {
         name: "Associate1",
@@ -408,7 +597,11 @@ export default [{
         tit: "#0040a6",
         num: 1,
         left: "50%",
-        translate: "translateX(-50%)"
+        translate: "translateX(-50%)",
+        list: [{
+          name: 'Ptahs',
+          contect: 'We are always exploring and working tirelessly to discover flavors, fragrances, and cosmetic ingredients that inspire our customers and delight consumers'
+        }]
       }
     ]
   }

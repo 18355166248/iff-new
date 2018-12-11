@@ -1,64 +1,76 @@
 <template>
-  <div class="main" :style="{paddingTop: paddTop}">
+  <div
+    class="main"
+    :style="{paddingTop: paddTop, fontSize: font_size+'px'}"
+    @click="$emit('close')"
+  >
     <div class="out_box">
-      <div
-        v-for="(item, index) in list"
+      <!-- 侧边栏 -->
+      <slot></slot>
+      <div v-for="(item, index) in list"
         :key="item.name"
-        class="box"
-        :class="{active: !item.active}"
-      >
-        <div v-for="(v1, i1) in item.children" :key="i1" class="inner_box"
-        :style="{
-          marginBottom: item.show ? '20px' : '60px',
-          width: item.active && item.show && i1 < 6 ? '300%' : '100%',
-          left: item.active && item.show && i1 < 6 ? index*-100+'%' : 0
-          }">
-          <template v-if="!item.show">
-            <div
-              :style="{
-                  borderColor: v1.border,
-                  left: v1.left,
-                  transform: v1.translate}"
-              class="child"
-            >
-              <span :style="{backgroundColor: v1.tit}">{{v1.num}}</span>
-              <span>{{v1.name}}</span>
-            </div>
-          </template>
-          <template v-else>
-            <template v-if="!v1.name">
-              <template v-for="(v2, i2) in v1.children">
-                <div
-                  :style="{
-                    borderColor: v2.border,
-                    left: !item.active ? '50%' : v2.left,
-                    transform: !item.active ? 'translateX(-50%)' : v2.translate}"
-                  :key="i2"
-                  class="child"
-                >
-                  <span :style="{backgroundColor: v2.tit}">{{v2.num}}</span>
-                  <span>{{v2.name}}</span>
-                </div>
-              </template>
+        :style="{zIndex: item.active ? 10 : 0}"
+        class="box">
+        <div class="package" :class="{active: !item.active}">
+          <div
+            v-for="(v1, i1) in item.children"
+            :key="i1"
+            class="inner_box"
+            :style="{
+            marginBottom: item.show ? '1.25em' : '3.75em',
+            width: item.active && item.show && i1 < 6 ? '300%' : '100%',
+            left: item.active && item.show && i1 < 6 ? index*-100+'%' : 0
+            }"
+          >
+            <template v-if="!item.show">
+              <div
+                :style="{
+                    borderColor: v1.border,
+                    left: v1.left,
+                    transform: v1.translate}"
+                class="child"
+              >
+                <span :style="{backgroundColor: v1.tit}">{{v1.num}}</span>
+                <span>{{v1.name}}</span>
+              </div>
             </template>
             <template v-else>
-              <template v-if="!v1.type">
-                <div
-                  :style="{
-                      borderColor: v1.border,
-                      left: !item.active ? '50%' : v1.left,
-                      transform: !item.active ? 'translateX(-50%)' : v1.translate}"
-                  class="child"
-                > 
-                  <span :style="{backgroundColor: v1.tit}">{{v1.num}}</span>
-                  <span>{{v1.name}}</span>
-                </div>
+              <template v-if="!v1.name">
+                <template v-for="(v2, i2) in v1.children">
+                  <div
+                    :style="{
+                      borderColor: v2.border,
+                      left: !item.active ? '50%' : v2.left,
+                      transform: !item.active ? 'translateX(-50%)' : v2.translate}"
+                    :key="i2"
+                    class="child"
+                    @click.stop="showDetail(index, i1, i2)"
+                  >
+                    <span :style="{backgroundColor: v2.tit}">{{v2.num}}</span>
+                    <span>{{v2.name}}</span>
+                  </div>
+                </template>
               </template>
               <template v-else>
-                <img :src="v1.url" class="spot">
+                <template v-if="!v1.type">
+                  <div
+                    :style="{
+                        borderColor: v1.border,
+                        left: !item.active ? '50%' : v1.left,
+                        transform: !item.active ? 'translateX(-50%)' : v1.translate}"
+                    class="child"
+                    @click.stop="showDetail(index, i1)"
+                  >
+                    <span :style="{backgroundColor: v1.tit}">{{v1.num}}</span>
+                    <span>{{v1.name}}</span>
+                  </div>
+                </template>
+                <template v-else>
+                  <img :src="v1.url" class="spot">
+                </template>
               </template>
             </template>
-          </template>
+          </div>
         </div>
         <div class="btn" @click="toggle(index)" :class="{active:item.active}">{{item.name}}</div>
       </div>
@@ -70,6 +82,7 @@
 import list1 from "./list";
 
 export default {
+  props: ['font_size', 'abFont'],
   data() {
     return {
       paddTop: null,
@@ -79,28 +92,37 @@ export default {
   },
   created() {
     this.paddTop =
-      window.innerHeight - 900 < 0 ? "100px" : window.innerHeight - 900 + "px"
+      document.body.clientHeight - 900 < 0 ? "100px" : document.body.clientHeight - 900 + "px"
     let list = JSON.parse(JSON.stringify(this.list1))
     list.forEach((v, i) => {
       v.children = v.children.splice(v.children.length - 5, 5)
     })
     this.list = JSON.parse(JSON.stringify(list))
   },
-  mounted() {},
   methods: {
     toggle(index) {
       let list = JSON.parse(JSON.stringify(this.list1))
       list.forEach((v, i) => {
-        v.show = true
+        v.show = true;
         if (i !== index) {
-          console.log(v.children.length)
-          v.active = false
-          v.children = [{url: require('assets/spot.png'), name: true, type: true}].concat(v.children.splice(v.children.length - 3, 3))
+          v.active = false;
+          v.children = [
+            { url: require("assets/spot.png"), name: true, type: true }
+          ].concat(v.children.splice(v.children.length - 3, 3));
         } else {
-          v.active = true
+          v.active = true;
         }
       })
-      this.list = JSON.parse(JSON.stringify(list))
+      
+      this.list = JSON.parse(JSON.stringify(list));
+    },
+    showDetail(index, i1, i2) {
+      let item;
+      if (i2 || i2 === 0) item = this.list1[index].children[i1].children[i2];
+      else item = this.list1[index].children[i1];
+      this.$emit("changeData", "leftShow", true);
+      this.$emit("changeData", "font_size", this.abFont);
+      this.$emit("changeData", "showObj", item);
     }
   },
   components: {}
@@ -122,93 +144,97 @@ export default {
   .out_box {
     width: 100%;
     height: 100%;
-    position: relative;
+    display: flex;
     > div.box {
       display: inline-block;
-      width: 33.333333%;
-      position: absolute;
       text-align: center;
-      position: absolute;
-      bottom: 20px;
-      left: 0;
-      &:nth-child(2) {
-        left: 33.33333%;
-      }
-      &:last-child {
-        left: 66.66666%;
-      }
-      &.active::before {
-        content: "";
+      height: 100%;
+      flex: 1;
+      position: relative;
+      z-index: 0;
+      .package {
+        bottom: 1em;
+        left: 0;
+        width: 100%;
         position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: 10;
-        left: 0;
-        top: 0;
-        background: linear-gradient(
-          to bottom,
-          rgba(255, 255, 255, 0.8),
-          rgba(255, 255, 255, 0)
-        );
-      }
-      .inner_box {
-        position: relative;
-        width: 100%;
-        height: 30px;
-        left: 0;
-        top: 0;
-        > div {
-          cursor: pointer;
-          height: 30px;
-          padding: 0 32px 0 56px;
-          box-sizing: border-box;
-          border-radius: 15px;
-          border: 2px solid transparent;
-          line-height: 26px;
+        &.active::before {
+          content: "";
           position: absolute;
-          span:first-child {
-            color: #fff;
-            line-height: 30px;
-            position: absolute;
-            left: -2px;
-            top: -2px;
-            width: 30px;
-            height: 30px;
-            border-radius: 15px;
-            background-color: transparent;
-          }
+          width: 100%;
+          height: 100%;
+          z-index: 10;
+          left: 0;
+          top: 0;
+          background: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.8),
+            rgba(255, 255, 255, 0)
+          );
         }
-        .spot {
-          position: absolute;
-          bottom: -10px;
-          width: 52px;
-          height:10px;
-          margin-left: -26px;
+        .inner_box {
+          position: relative;
+          width: 100%;
+          height: 1.875em;
+          left: 0;
+          top: 0;
+          font-size: 0.16em;
+          > div {
+            cursor: pointer;
+            height: 1.875em;
+            padding: 0 2em 0 3.5em;
+            box-sizing: border-box;
+            border-radius: 1em;
+            border: 2px solid transparent;
+            line-height: 1.625em;
+            position: absolute;
+            span:first-child {
+              color: #fff;
+              line-height: 1.875em;
+              position: absolute;
+              left: -2px;
+              top: -2px;
+              width: 1.875em;
+              height: 1.875em;
+              border-radius: 1em;
+              background-color: transparent;
+            }
+          }
+          .spot {
+            position: absolute;
+            bottom: -0.625em;
+            width: 3.25em;
+            height: 0.625em;
+            margin-left: -1.625em;
+          }
         }
       }
       .btn {
+        cursor: pointer;
         display: inline-block;
-        width: 268px;
-        height: 46px;
-        border: 4px solid #0040a6;
-        line-height: 38px;
+        width: 13.4em;
+        height: 2.3em;
+        border: 0.2em solid #0040a6;
+        line-height: 1.9em;
         box-sizing: border-box;
         text-align: center;
         font-weight: 700;
-        font-size: 20px;
-        border-radius: 8px;
-        position: relative;
+        font-size: 0.2em;
+        border-radius: 0.4em;
+        bottom: 1em;
         z-index: 10;
+        left: 50%;
+        margin-left: -6.7em;
+        position: absolute;
         &::before {
           content: "";
           box-sizing: border-box;
           position: absolute;
-          width: 268px;
-          height: 46px;
-          border-radius: 8px;
-          bottom: -10px;
-          left: -4px;
-          border: 2px solid #0040a6;
+          width: 13.4em;
+          height: 2.3em;
+          border-radius: 0.4em;
+          bottom: -0.5em;
+          left: -0.2em;
+          border: 0.1em solid #0040a6;
           border-top-left-radius: 0;
           border-top-right-radius: 0;
           border-top: none;

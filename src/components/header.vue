@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="header" @click="$emit('close')">
     <div class="fl">
       C&A Career Journey
     </div>
@@ -18,10 +18,6 @@
       }
     },
     methods: {
-      show() {
-        console.log(231)
-        this.name = '爸爸'
-      }
     },
     components: {
     }
