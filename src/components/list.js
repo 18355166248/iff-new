@@ -2,8 +2,9 @@ export default [{
     name: "Flavorist",
     active: false,
     show: false,
-    children: [{
-        name: "Associate1-1",
+    children: [
+      {
+        name: "Favorite10",
         border: "#864fef",
         tit: "#864fef",
         num: 10,
@@ -16,7 +17,7 @@ export default [{
       },
       {
         children: [{
-            name: "Associate9-1",
+            name: "Favorite9-1",
             border: "#864fef",
             tit: "#864fef",
             num: 9,
@@ -28,7 +29,7 @@ export default [{
             }]
           },
           {
-            name: "Associate9-2",
+            name: "Favorite9-2",
             border: "#50b63c",
             tit: "#50b63c",
             num: 9,
@@ -43,7 +44,7 @@ export default [{
       },
       {
         children: [{
-            name: "Associate8-1",
+            name: "Favorite8-1",
             border: "#864fef",
             tit: "#864fef",
             num: 8,
@@ -55,7 +56,7 @@ export default [{
             }]
           },
           {
-            name: "Associate8-2",
+            name: "Favorite8-2",
             border: "#50b63c",
             tit: "#50b63c",
             num: 8,
@@ -70,7 +71,7 @@ export default [{
       },
       {
         children: [{
-            name: "Associate7-1",
+            name: "Favorite7-1",
             border: "#864fef",
             tit: "#864fef",
             num: 7,
@@ -82,7 +83,7 @@ export default [{
             }]
           },
           {
-            name: "Associate7-2",
+            name: "Favorite7-2",
             border: "#b92424",
             tit: "#c44747",
             num: 7,
@@ -94,7 +95,7 @@ export default [{
             }]
           },
           {
-            name: "Associate7-3",
+            name: "Favorite7-3",
             border: "#50b63c",
             tit: "#50b63c",
             num: 7,
@@ -109,7 +110,7 @@ export default [{
       },
       {
         children: [{
-            name: "Associate6-1",
+            name: "Favorite6-1",
             border: "#864fef",
             tit: "#864fef",
             num: 6,
@@ -121,7 +122,7 @@ export default [{
             }]
           },
           {
-            name: "Associate6-2",
+            name: "Favorite6-2",
             border: "#b92424",
             tit: "#c44747",
             num: 6,
@@ -135,7 +136,7 @@ export default [{
         ]
       },
       {
-        name: "Associate55",
+        name: "Favorite55",
         border: "#b92424",
         tit: "#c44747",
         num: 5,
@@ -147,7 +148,7 @@ export default [{
         }]
       },
       {
-        name: "Associate4",
+        name: "Favorite4",
         border: "#b92424",
         tit: "#c44747",
         num: 4,
@@ -159,7 +160,7 @@ export default [{
         }]
       },
       {
-        name: "Associate3",
+        name: "Favorite3",
         border: "#b92424",
         tit: "#c44747",
         num: 3,
@@ -171,7 +172,7 @@ export default [{
         }]
       },
       {
-        name: "Associate2",
+        name: "Favorite2",
         border: "#b92424",
         tit: "#c44747",
         num: 2,
@@ -183,7 +184,7 @@ export default [{
         }]
       },
       {
-        name: "Associate1",
+        name: "Favorite1",
         border: "#b92424",
         tit: "#c44747",
         num: 1,
@@ -412,7 +413,7 @@ export default [{
     active: false,
     show: false,
     children: [{
-        name: "Associate1-1",
+        name: "Creative10",
         border: "#864fef",
         tit: "#864fef",
         num: 10,
@@ -425,7 +426,7 @@ export default [{
       },
       {
         children: [{
-            name: "Associate9-1",
+            name: "Creative9-1",
             border: "#864fef",
             tit: "#864fef",
             num: 9,
@@ -437,7 +438,7 @@ export default [{
             }]
           },
           {
-            name: "Associate9-2",
+            name: "Creative9-2",
             border: "#50b63c",
             tit: "#50b63c",
             num: 9,
@@ -452,7 +453,7 @@ export default [{
       },
       {
         children: [{
-            name: "Associate8-1",
+            name: "Creative8-1",
             border: "#864fef",
             tit: "#864fef",
             num: 8,
@@ -464,7 +465,7 @@ export default [{
             }]
           },
           {
-            name: "Associate8-2",
+            name: "Creative8-2",
             border: "#50b63c",
             tit: "#50b63c",
             num: 8,
@@ -479,7 +480,7 @@ export default [{
       },
       {
         children: [{
-            name: "Associate7-1",
+            name: "Creative7-1",
             border: "#864fef",
             tit: "#864fef",
             num: 7,
@@ -491,7 +492,7 @@ export default [{
             }]
           },
           {
-            name: "Associate7-2",
+            name: "Creative7-2",
             border: "#0040a6",
             tit: "#0040a6",
             num: 7,
@@ -503,7 +504,7 @@ export default [{
             }]
           },
           {
-            name: "Associate7-3",
+            name: "Creative7-3",
             border: "#50b63c",
             tit: "#50b63c",
             num: 7,
@@ -518,7 +519,7 @@ export default [{
       },
       {
         children: [{
-            name: "Associate6-1",
+            name: "Creative6-1",
             border: "#864fef",
             tit: "#864fef",
             num: 6,
@@ -530,7 +531,7 @@ export default [{
             }]
           },
           {
-            name: "Associate6-2",
+            name: "Creative6-2",
             border: "#0040a6",
             tit: "#0040a6",
             num: 6,
@@ -544,7 +545,7 @@ export default [{
         ]
       },
       {
-        name: "Associate55",
+        name: "Creative55",
         border: "#0040a6",
         tit: "#0040a6",
         num: 5,
@@ -556,7 +557,7 @@ export default [{
         }]
       },
       {
-        name: "Associate4",
+        name: "Creative4",
         border: "#0040a6",
         tit: "#0040a6",
         num: 4,
@@ -568,7 +569,7 @@ export default [{
         }]
       },
       {
-        name: "Associate3",
+        name: "Creative3",
         border: "#0040a6",
         tit: "#0040a6",
         num: 3,
@@ -580,7 +581,7 @@ export default [{
         }]
       },
       {
-        name: "Associate2",
+        name: "Creative2",
         border: "#0040a6",
         tit: "#0040a6",
         num: 2,
@@ -592,7 +593,7 @@ export default [{
         }]
       },
       {
-        name: "Associate1",
+        name: "Creative1",
         border: "#0040a6",
         tit: "#0040a6",
         num: 1,

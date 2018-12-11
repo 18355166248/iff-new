@@ -2,7 +2,7 @@
   <div
     class="main"
     :style="{paddingTop: paddTop, fontSize: font_size+'px'}"
-    @click="$emit('close')"
+    
   >
     <div class="out_box">
       <!-- 侧边栏 -->
@@ -45,6 +45,7 @@
                     :key="i2"
                     class="child"
                     @click.stop="showDetail(index, i1, i2)"
+                    :class="v2.select ? 'active' : ''"
                   >
                     <span :style="{backgroundColor: v2.tit}">{{v2.num}}</span>
                     <span>{{v2.name}}</span>
@@ -60,6 +61,7 @@
                         transform: !item.active ? 'translateX(-50%)' : v1.translate}"
                     class="child"
                     @click.stop="showDetail(index, i1)"
+                    :class="v1.select ? 'active' : ''"
                   >
                     <span :style="{backgroundColor: v1.tit}">{{v1.num}}</span>
                     <span>{{v1.name}}</span>
@@ -109,17 +111,80 @@ export default {
           v.children = [
             { url: require("assets/spot.png"), name: true, type: true }
           ].concat(v.children.splice(v.children.length - 3, 3));
+          v.children.forEach((v1) => {
+            if (v1.children) {
+              v1.children.forEach(v2 => {
+                v2.select = false
+              })
+            } else {
+              v1.select = false
+            }
+          })
         } else {
           v.active = true;
         }
       })
-      
       this.list = JSON.parse(JSON.stringify(list));
     },
     showDetail(index, i1, i2) {
-      let item;
-      if (i2 || i2 === 0) item = this.list1[index].children[i1].children[i2];
-      else item = this.list1[index].children[i1];
+      this.dealArr(index, i1, i2)
+      var item = this.selectCur(index, i1, i2)
+
+
+      this.showDom(item)
+    },
+    dealArr(index, i1, i2) {
+      this.list.forEach((v,i) => {
+        v.children.forEach((v1,ii) => {
+          if (v1.children) {
+              v1.children.forEach((v2,iii) => {
+                v2.select = false
+              })
+            } else {
+              v1.select = false
+            }
+        })
+        if (i !== index) {
+          let item = JSON.parse(JSON.stringify(this.list1[i]))
+          const curIndex = Math.abs(item.children.length - i1 -1)
+          let start = (8-curIndex) > 0 ? (8-curIndex) : 0
+          let end = 11-curIndex
+          let light = (9 - curIndex) ? 2 : 1
+          
+          if (curIndex > 1) { // 点击超过第二个的时候
+             let children = [
+                { url: require("assets/spot.png"), name: true, type: true }
+              ].concat(item.children.slice(start, end))
+            children.forEach((vv3, ii3) => {
+              if (vv3.children) {
+                children[ii3] = vv3.children[0]
+              }
+            })
+
+            children[light].select = true
+            v.children = children
+          } else { // 当点击第一个或者第二个的时候
+            v.children[Math.abs(4 - curIndex - 1)].select = true
+          }
+          let children = [
+            { url: require("assets/spot.png"), name: true, type: true }
+          ].concat(item.children.slice(item.children.length - i1, 3))
+          // console.log(Math.abs(item.children.length - i1 -1))
+        }
+      })
+    },
+    selectCur(index, i1, i2) {
+      let item
+      if (i2 || i2 === 0) {
+        item = JSON.parse(JSON.stringify(this.list1[index].children[i1].children[i2]))
+        this.list[index].children[i1].children[i2].select = true
+      } else {
+        item = JSON.parse(JSON.stringify(this.list1[index].children[i1]))
+        this.list[index].children[i1].select = true
+      }
+      return item
+    },
+    showDom(item) {
       this.$emit("changeData", "leftShow", true);
       this.$emit("changeData", "font_size", this.abFont);
       this.$emit("changeData", "showObj", item);
@@ -187,6 +252,9 @@ export default {
             border: 2px solid transparent;
             line-height: 1.625em;
             position: absolute;
+            &.active {
+              border-style: dashed;
+            }
             span:first-child {
               color: #fff;
               line-height: 1.875em;
